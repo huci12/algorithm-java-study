@@ -39,7 +39,9 @@ algorithm-java-study/
 │                   │   ├── FizzBuzz.java
 │                   │   ├── StringAnagram.java
 │                   │   ├── UnexpectedDemand.java
-│                   │   └── MinimumAbsoluteDifferenceInAnArray.java
+│                   │   ├── MinimumAbsoluteDifferenceInAnArray.java
+│                   │   ├── TwoStrings.java
+│                   │   └── MarkAndToys.java
 │                   └── programmers/
 │                       └── (추가 예정)
 ├── build.gradle
@@ -99,6 +101,36 @@ algorithm-java-study/
   - `int[]` 배열을 `List<Integer>`로 변환하는 다양한 방법
   - Stream API vs 전통적인 배열 처리 방식의 트레이드오프
 
+#### 5. Two Strings
+- **난이도**: 🟢 Easy
+- **카테고리**: Hash Table, String
+- **핵심 개념**: Set 자료구조, 문자 비교
+- **문제 설명**: 
+  - 두 문자열이 공통 부분 문자열을 가지는지 확인
+  - 부분 문자열은 최소 한 글자도 가능
+  - 예시: "hello"와 "world" → "YES" (공통 문자 'o', 'l' 존재)
+- **해결 방법**:
+  - 방법 1: HashSet을 사용한 O(n+m) 시간복잡도 솔루션
+  - 방법 2: boolean 배열(26개)을 사용한 공간 효율적 솔루션
+- **최적화 포인트**:
+  - 첫 번째 문자열의 문자들을 Set에 저장
+  - 두 번째 문자열 순회 중 공통 문자 발견 시 즉시 종료
+
+#### 6. Mark and Toys
+- **난이도**: 🟢 Easy
+- **카테고리**: Greedy Algorithm, Sorting
+- **핵심 개념**: 그리디 알고리즘, 정렬
+- **문제 설명**: 
+  - 제한된 예산으로 최대한 많은 장난감 구매
+  - 각 장난감의 가격이 주어졌을 때 최대 구매 가능 개수 계산
+  - 예시: 예산 50달러, 가격 [1, 12, 5, 111, 200, 1000, 10] → 4개 구매 가능
+- **해결 방법**:
+  - 가격을 오름차순으로 정렬
+  - 저렴한 장난감부터 구매하여 최대 개수 달성
+- **알고리즘 패턴**:
+  - Unexpected Demand 문제와 유사한 그리디 접근법
+  - 정렬 후 누적 합계가 예산을 초과하기 전까지 카운트
+
 ### Programmers
 *(추가 예정)*
 
@@ -146,6 +178,8 @@ algorithm-java-study/
 - ✅ String Anagram 문제 해결 (HashMap 활용)
 - ✅ Unexpected Demand 문제 해결 (그리디 알고리즘)
 - ✅ Minimum Absolute Difference in an Array 문제 해결 (정렬 활용)
+- ✅ Two Strings 문제 해결 (Set 자료구조 활용)
+- ✅ Mark and Toys 문제 해결 (그리디 알고리즘)
 
 ## 📅 향후 계획
 
