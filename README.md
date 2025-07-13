@@ -38,7 +38,8 @@ algorithm-java-study/
 │                   ├── hakerlank/
 │                   │   ├── FizzBuzz.java
 │                   │   ├── StringAnagram.java
-│                   │   └── UnexpectedDemand.java
+│                   │   ├── UnexpectedDemand.java
+│                   │   └── MinimumAbsoluteDifferenceInAnArray.java
 │                   └── programmers/
 │                       └── (추가 예정)
 ├── build.gradle
@@ -82,6 +83,21 @@ algorithm-java-study/
 - **최적화 포인트**:
   - 오름차순 정렬을 통한 그리디 접근
   - 작은 주문부터 처리하여 최대 주문 수 달성
+
+#### 4. Minimum Absolute Difference in an Array
+- **난이도**: 🟢 Easy
+- **카테고리**: Sorting, Array
+- **핵심 개념**: 정렬, 배열 순회
+- **문제 설명**: 
+  - 정수 배열에서 두 원소 간 절대값 차이의 최솟값 찾기
+  - 예시: [3, -7, 0] → 최소 차이는 3 (3과 0의 차이)
+- **해결 방법**:
+  - 배열을 정렬 후 인접한 원소들의 차이만 비교
+  - 정렬된 배열에서는 최소 차이가 항상 인접한 원소 사이에서 발생
+- **학습 포인트**:
+  - `List.of()`로 생성된 불변 리스트의 특성 이해
+  - `int[]` 배열을 `List<Integer>`로 변환하는 다양한 방법
+  - Stream API vs 전통적인 배열 처리 방식의 트레이드오프
 
 ### Programmers
 *(추가 예정)*
@@ -129,10 +145,12 @@ algorithm-java-study/
 - ✅ FizzBuzz 문제 해결 및 최적화
 - ✅ String Anagram 문제 해결 (HashMap 활용)
 - ✅ Unexpected Demand 문제 해결 (그리디 알고리즘)
+- ✅ Minimum Absolute Difference in an Array 문제 해결 (정렬 활용)
 
 ## 📅 향후 계획
 
 ### 단기 목표
+- [ ] HackerRank 문제 수집 및 해결 노하우 공유
 - [ ] Programmers 코딩테스트 고득점 Kit 완주
 - [ ] 매일 최소 1문제씩 꾸준히 해결
 - [ ] 각 문제에 대한 상세한 풀이 과정 문서화
